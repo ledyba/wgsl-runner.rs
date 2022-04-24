@@ -46,5 +46,4 @@ pub async fn save(
   drop(padded_buffer);
 
   output_buffer.unmap();
-
 }
