@@ -94,7 +94,7 @@ fn main() -> anyhow::Result<()> {
       encoder.finish()
     };
     queue.submit(Some(command_buffer));
-    crate::png::save("out.png", device, output_buffer, &buffer_dimensions).await;
+    png::save("out.png", device, output_buffer, &buffer_dimensions).await?;
     Ok(())
   }))?;
   Ok(())
